@@ -90,10 +90,10 @@ module.exports = {
                     },
                     {
                         name : "algorithm",
-                        description : "The algorithm used to verify the token's signature. Can be HS256, RS256, or ES256.",
+                        description : "The algorithm used to verify the token's signature. Can be HS256, RS256, HS512,or ES256.",
                         type : "string",
-                        enum : ["HS256","RS256","ES256"],
-                        default : "HS256"
+                        enum : ["HS256","RS256","ES256","HS512"],
+                        default : "HS512"
                     },
                     {
                         name : "rsa_public_key",
