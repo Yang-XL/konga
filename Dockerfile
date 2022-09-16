@@ -4,7 +4,7 @@ COPY . /app
 
 WORKDIR /app
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/' /etc/apk/repositories
-RUN apk update
+RUN apk upgrade --update
 RUN apk add bash git ca-certificates 
 RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install -g bower patch-package 

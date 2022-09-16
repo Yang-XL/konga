@@ -19,7 +19,7 @@ module.exports = {
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
 
-  hookTimeout: process.env.KONGA_HOOK_TIMEOUT || 60000,
+  hookTimeout: process.env.KONGA_HOOK_TIMEOUT || 120000,
 
   // kong_admin_url : process.env.KONG_ADMIN_URL || 'http://127.0.0.1:8001',
 
