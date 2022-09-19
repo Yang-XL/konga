@@ -396,7 +396,11 @@ var KongPluginService = _.merge(_.cloneDeep(require('./KongService')), {
         name: "Other",
         description: "Other Plugins",
         icon: "mdi-account-box-outline",
-        plugins: {}
+        plugins: {
+          "url-replace": {
+            description: "优先级最高，在访问之初替换URL的一些错误拼写等"
+          },
+        }
       }
     ]
   },
@@ -714,7 +718,7 @@ var KongPluginService = _.merge(_.cloneDeep(require('./KongService')), {
       },
       jwt: {
         meta: {
-          description: 'Verify requests containing HS256 or RS256 signed JSON Web Tokens (as specified in RFC 7519). Each of your Consumers will have JWT credentials (public and secret keys) which must be used to sign their JWTs. A token can then be passed through the Authorization header or in the request\'s URI and Kong will either proxy the request to your upstream services if the token\'s signature is verified, or discard the request if not. Kong can also perform verifications on some of the registered claims of <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> (exp and nbf).'
+          description: 'Verify requests containing HS256 or RS256 OR HS512 signed JSON Web Tokens (as specified in RFC 7519). Each of your Consumers will have JWT credentials (public and secret keys) which must be used to sign their JWTs. A token can then be passed through the Authorization header or in the request\'s URI and Kong will either proxy the request to your upstream services if the token\'s signature is verified, or discard the request if not. Kong can also perform verifications on some of the registered claims of <a href="https://tools.ietf.org/html/rfc7519">RFC 7519</a> (exp and nbf).'
         },
         'uri_param_names': {
           type: 'text',
